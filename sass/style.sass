@@ -1,3 +1,8 @@
+@import 'variables' 
+@import 'mixins'  
+@import 'header'
+@import 'nav'
+    
 div 
     font-size: 20px
     background-color: #ddd
@@ -9,6 +14,21 @@ div
     // box-shadow: 0 0 10px 2px #222
     font-family: Arial, Helvetica, sans-serif
     letter-spacing: 1px
-
+    display: flex
+    filter: grayscale(1)
+    transform: translate(30deg)
+div
+    &.small
+        +circle(50px, 50%)
+        background-color: #233133
+    &.medium
+        +circle(120px, 20%)
+    &.large 
+        +circle(230px, 60%)
+    
 body 
     background-color: #444
+    padding: 0
+    color: $color-font
+
+
